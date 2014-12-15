@@ -1,0 +1,90 @@
+#container {
+	font-family: 'Bangers', cursive;
+	text-align: center;
+}
+
+#game-board {
+	width: 315px;
+	margin: 0 auto;
+}
+
+#floydm {
+	position: absolute;
+	z-index: 10;
+	left: 380px;
+	display: none;
+	text-align: center;
+}
+
+#mannym {
+	position: absolute;
+	z-index: 10;
+	left: 380px;
+	display: none;
+	text-align: center;
+}
+
+.squares {
+	width: 100px;
+	height: 100px;
+	border: 1px solid;
+	display: inline-block;
+	color: white;
+	font-size: 100px;
+	vertical-align: top;
+}
+
+header {
+	background-color: black;
+	height: 120px;
+	text-align: center;
+}
+
+footer {
+	font-family: 'Shadows Into Light', cursive;
+	background-color: black;
+	height: 125px;
+	color: white;
+	font-size: 11px;
+}
+
+footer ul {
+	list-style: none;
+}
+
+#scoreOne,
+#scoreTwo {
+	display: inline-block;
+	margin: 15px;
+}
+
+#statsOne {
+	display: inline-block;
+	margin-left: 260px;
+}
+
+#statsTwo {
+	display: inline-block;
+	float: right;
+	margin-right: 280px;
+}
+
+body {
+	background: url('../images/ring3_0005.gif');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#floyd {
+	position: absolute;
+	top: 300px;
+	left: 200px;
+	z-index: -1;
+}
+
+#manny {
+	position: absolute;
+	left: 720px;
+	top: 300px;
+	z-index: -1;
+}	

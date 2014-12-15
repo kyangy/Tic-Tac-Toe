@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html ng-app="TTTapp">
+	<head>
+		<meta charset="utf-8">
+
+		<title>TTT</title>
+
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light|Bangers' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/angular.js"></script>
+<!-- 		// <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+		// <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script> -->
+		<script src="js/app.js"></script>
+<!-- 		// <script src="js/fireBoard.js"></script> -->
+		<script src="js/TTTcontroller.js"></script>
+	</head>
+	<header>
+		<a target="_top" href="http://www.flamingtext.com/" ><img src="http://blog.flamingtext.com/blog/2014/12/08/flamingtext_com_1418002383_249422708.png" border="0" alt="Logo Design by FlamingText.com" title="Logo Design by FlamingText.com"></a>
+	</header>
+
+	<body ng-controller="TTTcontroller as game">
+		
+		<section id="container">
+			<div id="floydm">
+				<iframe src="http://giphy.com/embed/7ipn23959wWCQ?html5=true" width="480" height="368" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><br>
+				<button ng-click="game.resetGame()">Reset Game</button>
+			</div>
+			<div id="mannym">
+				<iframe src="http://giphy.com/embed/Fra6axm296NcQ?html5=true" width="480" height="368" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><br>
+				<button ng-click="game.resetGame()">Reset Game</button>
+			</div>
+		
+			<div id="game-board">
+				<div class="squares" 
+					ng-repeat="tile in game.gameBoard track by $index"
+					ng-click="game.clickBox($index)">
+					{{tile}}
+				</div>
+				<button ng-click="game.startTimer()">Start Game</button>
+				<div id="countdown"></div>
+				<div id="scoreOne">Mayweather<br>{{game.playerOneScore}}</div>
+				<div id="scoreTwo">Pacquiao<br>{{game.playerTwoScore}}</div>
+			</div>
+		</section>
+	</body>	
+	<br>
+	<br>
+	<footer>
+		<img id="floyd" src="images/floyd2.png">
+		<img id="manny" src="images/manny3.png">
+		<div id="statsOne">
+			<h3>Floyd "Money" Mayweather, Jr</h3>
+			<ul>
+				<li>Record: 47 - 0 - 0</li>
+				<li>Height: 5'8"</li>
+				<li>Reach: 72"</li>
+				<li>KO's: 26</li>
+			</ul>
+		</div>
+		<div id="statsTwo">
+			<h3>Manny "Pac-Man" Pacquiao</h3>
+			<ul>
+				<li>Record: 57 - 5 - 2</li>
+				<li>Height: 5'6"</li>
+				<li>Reach: 67"</li>
+				<li>KO's: 38</li>
+			</ul>
+		</div>
+	</footer>
+</html>
